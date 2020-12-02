@@ -1,0 +1,23 @@
+<div class="row justify-content-left no-gutters">
+    <div id="general__column" class="col-12 col-md-9">
+
+        <h2 class="mb-4">Buscar canción</h2>
+        <div class="input__wrapper ">
+            <input [formControl]="inputField " type="text " placeholder="Buscar.. " autofocus>
+        </div>
+
+        <ul *ngFor="let item of searchResults" class="list-unstyled mb-2">
+            <li class="media my-3">
+                <img class="mr-3" src={{item.album.images[2]?.url}} alt="Generic placeholder image">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">{{item.album.name}}</h5>
+                    {{item.artists[0]?.name}}
+                </div>
+                <i (click)="addTrack(item)" class="fas fa-plus ml-3"></i>
+            </li>
+        </ul>
+    </div>
+</div>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#f65050" type="pacman" [fullScreen]="true">
+    <p style="color: white"> Cargando.. </p>
+</ngx-spinner>

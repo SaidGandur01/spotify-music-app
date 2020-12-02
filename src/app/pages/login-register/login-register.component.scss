@@ -1,0 +1,127 @@
+.row {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../../../assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+* {
+    letter-spacing: 1px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0px 30px 15px 30px;
+    width: 250px;
+    height: 70%;
+    border-radius: 20px;
+    background: #ffffff;
+    background: -webkit-linear-gradient(to bottom, #1d4350, #a43931);
+    background: linear-gradient(to bottom, #1d4350, #a43931);
+    -webkit-box-shadow: 5px 10px 18px -5px rgba(219, 210, 219, 0.78);
+    -moz-box-shadow: 5px 10px 18px -5px rgba(219, 210, 219, 0.78);
+    box-shadow: 5px 10px 18px -5px rgba(219, 210, 219, 0.78);
+}
+
+h1,
+h3,
+p {
+    margin: 0px;
+    color: white;
+}
+
+.form-container h1 {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 5%;
+}
+
+.form-container form {
+    display: contents;
+}
+
+input {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+h3 {
+    align-self: flex-start;
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.keep-logged {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.keep-logged input {
+    cursor: pointer;
+}
+
+.keep-logged span {
+    color: white;
+    font-size: .8rem;
+    font-weight: 400;
+    margin-left: .5rem;
+}
+
+button {
+    border: none;
+    text-decoration: none;
+    margin-top: 5%;
+    height: auto;
+    border-radius: 15px;
+    width: 100%;
+    align-self: center;
+    padding: 10px;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+    transition: all ease 0.2s;
+    background-color: #ffffff;
+}
+
+.div__error {
+    font-size: .7rem;
+    align-self: start;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+p {
+    color: #ffffff;
+    font-size: .7rem;
+    font-weight: 400;
+}
+
+u {
+    cursor: pointer;
+}
+
+@media (max-width: 530px) {
+    .form-container {
+        width: 75%;
+        height: 70%;
+        padding: 0px 15px 15px 15px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {}

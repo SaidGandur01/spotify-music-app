@@ -1,0 +1,52 @@
+<div class="row no-gutters">
+    <div *ngIf="bandera" class="form-container col-8 col-sm-6 col-md-5 col-lg-4">
+        <form [formGroup]="loginForm" #formDirective="ngForm" (ngSubmit)="onSubmitLogin(loginForm, formDirective)">
+            <h1>..Music App..</h1>
+            <h3>Correo electrónico</h3>
+            <input formControlName="email" placeholder="example@hotmail.com" type="email">
+            <div class="div__error" *ngIf="loginForm.controls.email.invalid && (loginForm.controls.email.dirty || loginForm.controls.email.touched)">
+                <span *ngIf="loginForm.controls.email.errors.required">Correo electrónico es requerido.</span>
+                <span *ngIf="loginForm.controls.email.errors.email">Correo electrónico no válido.</span>
+            </div>
+            <h3>Password</h3>
+            <input formControlName="password" placeholder="Contraseña" type="password">
+            <div class="div__error" *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)">
+                <span *ngIf="loginForm.controls.password.errors.required">Contraseña es requerida.</span>
+            </div>
+            <div class="keep-logged">
+                <input formControlName="checkBox" type="checkbox">
+                <span>No Cerrar Sesión</span>
+            </div>
+            <button [disabled]="!loginForm.valid" type="submit">Iniciar sesión</button>
+        </form>
+        <p>No tienes cuenta? <strong><u (click)="changeToRegister()">Regístrate aquí</u></strong></p>
+    </div>
+    <div *ngIf="!bandera" class="form-container col-8 col-sm-6 col-md-5 col-lg-4">
+        <form [formGroup]="registerForm" #formDirective="ngForm" (ngSubmit)="onSubmitRegister(registerForm, formDirective)">
+            <h1>Regístrate</h1>
+            <h3>Nombres</h3>
+            <input formControlName="name" placeholder="Nombres" type="text">
+            <div class="div__error" *ngIf="registerForm.controls.name.invalid && (registerForm.controls.name.dirty || registerForm.controls.name.touched)">
+                <span *ngIf="registerForm.controls.name.errors.required">Nombre es requerido.</span>
+            </div>
+            <h3>Apellidos</h3>
+            <input formControlName="lastname" placeholder="Apellidos" type="text">
+            <div class="div__error" *ngIf="registerForm.controls.lastname.invalid && (registerForm.controls.lastname.dirty || registerForm.controls.lastname.touched)">
+                <span *ngIf="registerForm.controls.lastname.errors.required">Apellidos son requeridos.</span>
+            </div>
+            <h3>Correo electrónico</h3>
+            <input formControlName="email" placeholder="example@hotmail.com" type="email">
+            <div class="div__error" *ngIf="registerForm.controls.email.invalid && (registerForm.controls.email.dirty || registerForm.controls.email.touched)">
+                <span *ngIf="registerForm.controls.email.errors.required">Correo electrónico es requerido.</span>
+                <span *ngIf="registerForm.controls.email.errors.email">Correo electrónico no válido.</span>
+            </div>
+            <h3>Password</h3>
+            <input formControlName="password" placeholder="Contraseña" type="password">
+            <div class="div__error" *ngIf="registerForm.controls.password.invalid && (registerForm.controls.password.dirty || registerForm.controls.password.touched)">
+                <span *ngIf="registerForm.controls.password.errors.required">Contraseña es requerida.</span>
+            </div>
+            <button [disabled]="!registerForm.valid" type="submit">Crear cuenta</button>
+        </form>
+        <p>Regresar a <strong><u (click)="changeToLogin()">Login</u></strong></p>
+    </div>
+</div>

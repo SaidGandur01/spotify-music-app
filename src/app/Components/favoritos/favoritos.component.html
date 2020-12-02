@@ -1,0 +1,28 @@
+<div class="row justify-content-left no-gutters">
+    <div class="col-12">
+        <h2 class="mb-4">Tus Favoritos</h2>
+        <div id="no-more-tables" class="table-responsive">
+            <table class="table table-hover table-dark table-striped ">
+                <thead>
+                    <tr style="background-color: rgba(246, 80, 80, 1);">
+                        <th scope="col">Título</th>
+                        <th scope="col">Artista</th>
+                        <th scope="col">Álbum</th>
+                        <th class="text-center" scope="col">Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of tracks">
+                        <td data-title="Título">{{ item.track.name }}</td>
+                        <td data-title="Artista">{{ item.track.album.artists['0']?.name }}</td>
+                        <td data-title="Álbum">{{ item.track.album.name }}</td>
+                        <td data-title="Remover" (click)="removeItem(item)" class="text-md-center"><i class="far fa-trash-alt"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#f65050" type="pacman" [fullScreen]="true">
+    <p style="color: white"> Cargando.. </p>
+</ngx-spinner>

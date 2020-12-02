@@ -1,0 +1,47 @@
+nav {
+    height: 56px;
+    background-color: #191918;
+}
+
+.navbar-shrink .nav>.main-links a:hover,
+.navbar-shrink .nav>.main-links a:focus {
+    border-bottom: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    color: white !important;
+    cursor: pointer;
+}
+
+img {
+    width: auto;
+}
+
+span {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: white;
+}
+
+.active {
+    background-color: rgba(246, 80, 80, 1);
+}
+
+i {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #navbarSupportedContent {
+        z-index: 1 !important;
+        background-color: black !important;
+    }
+    li {
+        padding: 1%;
+    }
+}

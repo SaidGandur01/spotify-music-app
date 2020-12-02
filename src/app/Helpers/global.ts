@@ -1,0 +1,9 @@
+export var global = {
+  // clientId: '20406fb338c94604a295f0c6fddfd9e8',
+  // base64encoded: 'MjA0MDZmYjMzOGM5NDYwNGEyOTVmMGM2ZmRkZmQ5ZTg6ZWQ0MjBhY2UzZmU0NDQwM2ExZjNhMWI5ZGY1OWNlMjA='
+  // New User
+
+  clientId: '28d3b1921dff473287906aeb804a4fcb',
+  base64encoded: 'MjhkM2IxOTIxZGZmNDczMjg3OTA2YWViODA0YTRmY2I6OWZjZDQyMzU1ZDM4NGUzOWE3ZWYyOGNjZTA3NjlmYzU='
+
+}

@@ -1,0 +1,76 @@
+.row {
+    min-height: calc(100vh - 56px);
+    background-color: #393e46;
+    padding: 3rem;
+}
+
+h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 530px) {
+    .row {
+        padding: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .form-container {
+        width: 75%;
+        height: 70%;
+        padding: 0px 15px 15px 15px;
+    }
+    #no-more-tables thead,
+    #no-more-tables tbody,
+    #no-more-tables th,
+    #no-more-tables td,
+    #no-more-tables tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    #no-more-tables thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    #no-more-tables tr {
+        border: 1px solid #ccc;
+    }
+    #no-more-tables td {
+        background: rgb(246, 80, 80);
+        background: linear-gradient(90deg, rgba(246, 80, 80, 1) 0%, rgba(246, 80, 80, 1) 26%, rgba(105, 105, 93, 1) 27%, rgba(25, 25, 24, 1) 100%, rgba(25, 25, 24, 1) 100%);
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 35%;
+        white-space: normal;
+        text-align: left;
+    }
+    #no-more-tables td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 25%;
+        padding-right: 10px;
+        // white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        padding: .3rem;
+    }
+    /*
+    Label the data
+    */
+    #no-more-tables td:before {
+        content: attr(data-title);
+        // content: attr(content);
+    }
+}

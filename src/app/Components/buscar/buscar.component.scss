@@ -1,0 +1,80 @@
+.row {
+    min-height: calc(100vh - 56px);
+    background-color: #393e46;
+    padding: 5%;
+}
+
+.general__column {
+    padding: 5%;
+}
+
+h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.input__wrapper {
+    width: 100%;
+}
+
+.input__wrapper input {
+    width: -webkit-fill-available;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+li {
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    background: rgb(255, 184, 184);
+    background: linear-gradient(90deg, rgba(255, 184, 184, 1) 0%, rgba(246, 80, 80, 1) 61%, rgba(25, 25, 24, 1) 100%, rgba(25, 25, 24, 1) 100%, rgba(105, 105, 93, 1) 100%);
+    -webkit-box-shadow: 2px 3px 9px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 3px 9px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 3px 9px 1px rgba(0, 0, 0, 0.75);
+}
+
+li:first-child {
+    margin-top: 1%;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    transition: all ease 0.2s;
+}
+
+.media {
+    align-items: center;
+}
+
+h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+img {
+    width: 4.5rem;
+}
+
+.fa-plus {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+i {
+    cursor: pointer;
+}
+
+@media (max-width: 530px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    .general__column {
+        padding: 10%;
+    }
+    .row {
+        padding: 5%;
+    }
+}
